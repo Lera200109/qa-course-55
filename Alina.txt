@@ -1,0 +1,5 @@
+Feature: Accesare profil
+Scenario1: Utilizatorul poate accesa profilul unui specialist
+GIVEN: Utilizatorul se afla pe pagina cu specialisti
+WHEN: Utilizatorul da click pe oricare profil existent 
+THEN:Utilizatorul poate accesaprofilul specialistului

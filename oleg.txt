@@ -1,0 +1,5 @@
+FEAUTURE:Accesare profil
+SCENARIUL 1:Utilizatorul poate accesa profilul unui specialis QA.
+GIVEN:Utilizatorul se afla pe pagina principala cu profiluri de specialisti QA.
+WHEN:Utilizatorul acceseaza pagina personala a unui specialist.
+THEN:Utilizatorul ar trebui sa fie redirictionat pe pagina cu informatii personale a specialistului

@@ -1,0 +1,6 @@
+Feature: Accesare profil
+Scenario 1: Utilizatorul poate accesa profilul unui specialist
+And: Utilizatorul este logat
+Given: Utilizatorul se afla pe pagina cu specialisti
+When: Utilizatorul da click pe oricare profil existent
+Then: Utilizatorul poate accesa profilul specialistului
