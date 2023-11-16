@@ -1,5 +1,6 @@
-Feature:Logare prin intermediul email-ului
-Scenario 1: Utilizatorul se poate loga cu succes pe site
-Given: Utilizatorul se afla pe pagina de inregistrare prin intermediul email-lului
-When: Utilizatorul continua dind click pe butonul "Continue with Email"
-Then: utilizatorul ar trebui sa acceseze site-ul "www.upwork.com"
+Feature: Accesare profil
+Scenario: Utilizatorul poate accesa profilul unui specialist QA
+Given: Utilizatorul se afla pe pagina principala
+And: Utlizatorul nu este logat
+When: Utilizatorul da click pe profilul unui specialist QA
+Then: Utilizatorului ar trebui sa poata accesa profilul specialistului QA
