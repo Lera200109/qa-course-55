@@ -1,0 +1,6 @@
+Feature: Accesare profil
+Scenario 1:Utilizatorul poate accesa un profil al unui specialist QA
+Given Utilizatorul se afla pe pagina principala
+And Utilizatorul nu este logat
+When Utilizatorul acceseaza profilul unui specialist QA
+Then Utilizatorului ar trebui sa i se afiseze o fereastra a specialistului QA
