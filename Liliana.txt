@@ -1,5 +1,5 @@
 Feature:Logare prin intermediul email-ului
 Scenario 1: Utilizatorul se poate loga cu succes pe site
 Given: Utilizatorul se afla pe pagina de inregistrare prin intermediul email-lului
-When: Utilizatorul continua dind click pe butonul "Continue with Google"
+When: Utilizatorul continua dind click pe butonul "Continue with Email"
 Then: utilizatorul ar trebui sa acceseze site-ul "www.upwork.com"
