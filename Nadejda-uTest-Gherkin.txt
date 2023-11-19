@@ -1,0 +1,206 @@
+Feature 1: Creare cont
+Scenario 1: Utilizatorul isi creaza cont cu succes
+Given Utilizatorul se afla pe pagina de creare cont
+When Utilizatorul parcurge toti 5 pasi de introducere/verificare/corectare (daca e cazul) a datelor
+And Utilizatorul bifeaza "uTest Terms of Use" si "Privacy & Security Policy"
+And Utilizatorul da click pe butonul "Complete Setup"
+And Utilizatorul da click pe butonul "Confirm email address" in emailul primit
+Then Utilizatorului ar trebui sa ii fie afisat mesjajul "You're all set! Your account has been created. Sign in and start using uTest."
+
+Scenario 2: Utilizatorul nu isi creaza cont cu succes
+Given Utilizatorul se afla pe pagina de creare cont
+When Utilizatorul parcurge toti 5 pasi de introducere/verificare/corectare (daca e cazul) a datelor
+And Utilizatorul nu bifeaza "uTest Terms of Use" si "Privacy & Security Policy"
+And Utilizatorul da click pe butonul "Complete Setup"
+Then Utilizatorului nu ar trebui sa ii fie afisat mesjajul "You're all set! Your account has been created. Sign in and start using uTest."
+And Utilizatorului ar trebui sa ii fie afisat mesajul "You must accept Terms of Use and uTest Guidelines to be able to continue" and
+"You must accept Privacy &Policy to be able to continue"
+
+When Utilizatorul parcurge toti 5 pasi de introducere/verificare/corectare (daca e cazul) a datelor
+And Utilizatorul bifeaza doar "uTest Terms of Use" and "uTest Guidelines"
+And Utilizatorul da click pe butonul "Complete Setup"
+Then Utilizatorului nu ar trebui sa ii fie afisat mesjajul "You're all set! Your account has been created. Sign in and start using uTest."
+And Utilizatorului ar trebui sa ii fie afisat mesajul "You must accept Privacy &Policy to be able to continue"
+
+When Utilizatorul parcurge toti 5 pasi de introducere/verificare/corectare (daca e cazul) a datelor
+And Utilizatorul bifeaza doar "Privacy & Security Policy"
+And Utilizatorul da click pe butonul "Complete Setup"
+Then Utilizatorului nu ar trebui sa ii fie afisat mesjajul "You're all set! Your account has been created. Sign in and start using uTest."
+And Utilizatorului ar trebui sa ii fie afisat mesajul "You must accept Terms of Use and uTest Guidelines to be able to continue"
+
+
+
+Feature 2: Autentificare utilizator
+Scenario 1: Utilizatorul se poate autentifica cu succes
+Given Utilizatorul se afla pe pagina de autentificare
+When Utilizatorul insereaza credentialele valide
+And Utilizatorul da click pe butonul "Log in" daca e de pe telefon mobil sau "Sign in" daca e de pe calculator
+Then Utilizatorul ar trebui sa fie autentificat cu succes
+
+Scenario 2: Utilizatorul nu se poate autentifica cu succes
+Given Utilizatorul se afla pe pagina de autentificare
+When Utilizatorul introduce credentialele invalide
+And Utilizatorul da click pe butonul "Log in" daca e de pe telefon mobil sau "Sign in" daca e de pe calculator
+Then Utilizatorul nu ar trebui sa fie autentificat cu succes
+And Utilizatorul ar trebui sa ii fie afisat mesajul "Invalid username or password."
+
+Given Utilizatorul se afla pe pagina de autentificare
+When Utilizatorul introduce credentialele invalide
+And Utilizatorul da click pe butonul "Log in" daca e de pe telefon mobil sau "Sign in" daca e de pe calculator
+Then Utilizatorul nu ar trebui sa fie autentificat cu succes
+And Utilizatorul ar trebui sa ii fie afisat mesajul "Invalid username or password."
+
+Given Utilizatorul se afla pe pagina de autentificare
+When Utilizatorul introduce adresa de email valida si parola invalida
+And Utilizatorul da click pe butonul "Log in" daca e de pe telefon mobil sau "Sign in" daca e de pe calculator
+Then Utilizatorul nu ar trebui sa fie autentificat cu succes
+And Utilizatorul ar trebui sa ii fie afisat mesajul "Invalid username or password."
+
+Given Utilizatorul se afla pe pagina de autentificare
+When Utilizatorul iintroduce adresa de email invalida si parola valida
+And Utilizatorul da click pe butonul "Log in" daca e de pe telefon mobil sau "Sign in" daca e de pe calculator
+Then Utilizatorul nu ar trebui sa fie autentificat cu succes
+And Utilizatorul ar trebui sa ii fie afisat mesajul "Invalid username or password."
+
+
+
+Feature 3: Resetare parola
+Scenario 1: Utilizatorul isi poate reseta parola
+Given Utilizatorul se afla pe pagina de autentificare
+When Utilizatorul da click pe elementul "Forgot your password?"
+And Utilizatorul introduce numele de utilizator sau adresa de email
+And Utilizatorul da click pe butonul "Reset password"
+And Utilizatorul deschide emailul primit de la uTEst in posta sa electronica
+And Utilizatorul da click pe link-ul din email
+And Utilizatorul introduce parola noua pe pagina de resetare parola
+And Utilizatorul introduce parola noua pentru a o confirma
+And Utilizatorul da clikc pe butonul "Submit"
+Then Utilizatorul ar trebui sa isi reseteze parola cu succes
+And Utilizatorul ar trebui sa fie logat cu succes
+
+Scenario 2: Utilizatorul nu isi poate reseta parola
+Given Utilizatorul se afla pe pagina de autentificare
+When Utilizatorul da click pe elementul "Forgot your password?"
+And Utilizatorul introduce numele de utilizator sau adresa de email
+And Utilizatorul da click pe butonul "Reset password"
+And Utilizatorul nu primeste emailul de la uTEst in posta sa electronica
+Then Utilizatorul nu ar trebui sa isi poata reseta parola
+
+
+
+Feature 4: Setare metoda de plata
+Scenario 1:Utilizatorul poate seta metoda de plata
+Given Utilizatorului ii este afisata fereastra de setare a metodei de plata
+And Utilizatorul este logat
+When Utilizatorul bifeaza "Paypal"
+And Utilizatorul bifeaza "Yes"
+And Utilizatorul introduce adresa de e-mail al contului sau de Paypal
+And Utilizatorul da click pe butonul "Save"
+Then Utilizatorului ar trebui sa ii fie setata metoda de plata cu succes
+
+When Utilizatorul bifeaza "Payoneer"
+And Utilizatorul bifeaza " I have already a Payoneer account."
+And Utilizatorul da click pe butonul "Next"
+And Utilizatorul insereaza emailul contului de PAyoneer
+And Utilizatorul da click pe butonul "Save"
+Then Utilizatorului ar trebui sa ii fie setata metoda de plata cu succes
+
+Scenario 2:Utilizatorul nu poate seta metoda de plata
+Given Utilizatorului ii este afisata fereastra de setare a metodei de plata
+And Utilizatorul este logat
+When Utilizatorul bifeaza "Paypal"
+And Utilizatorul bifeaza "No"
+Then Utilizatorului nu ar trebui sa ii fie setata metoda de plata 
+And Utilizatorului ar trebui sa ii fie afisat mesajul "First, go to PayPal.com to create a new account.
+Afterwards, return to this page to link your new PayPal account to your uTest account."
+
+When Utilizatorul bifeaza "Payoneer"
+And Utilizatorul bifeaza " I do not have a Payoneer account."
+Then Utilizatorului nu ar trebui sa ii fie setata metoda de plata cu succes
+And Utilizatorului ar trebui sa ii fie afisat mesajul "First, go to Payoneer.com to create a new account.
+Afterwards, return to this page to link your new PayPal account to your uTest account."
+
+
+
+Feature 5: Schimbare metoda de plata  
+Scenario 1: Utilizatorul poate schimba metoda de plata
+Given Utilizatorul se afla pe pagina Payments
+When Utilizatorul da click pe butonul "Change"
+And Utilizatorul selecteaza "Paypal"
+And Utilizatorul bifeaza "Yes"
+Then Utilizatorului ar trebui sa ii fie schimbata metoda de plata
+
+When Utilizatorul da click pe butonul "Change"
+And Utilizatorul selecteaza "Payoneer" pe fereastra afisata
+And Utilizatorul bifeaza "I already have a Payoneer account which I want to link to may uTest account."
+And Utilizatorul da click pe butonul Next
+And Utilizatorul introduce emial-ul contului sau de Payoneer 
+Then Utilizatorului ar trebui sa ii fie schimbata metoda de plata
+
+
+
+Feature 6: Accesare sectiunea "Projects"
+Scenario 1: Utilizatorul poate accesa sectiunea "Projects"
+Given Utilizatorul se aflta pe pagina principala
+When Utilizatorul da click pe elementul "Projects"
+Then Utilizatorul ar trebui sa fie directionat pe pagina cu proiecte
+
+
+
+Feature 7: Accesare proiect
+Scenario 1: Utilizatorul poate accesa proiect
+Given Utilizatorul se afla pe pagina cu proiecte
+When Utilizatorul da click pe titlul oricarui proiect sau pictograma patrat cu sageata
+Then Utilizatorul ar trebui sa i se afiseze pagina cu proiectul selectat
+
+Scenario 2: Utilizatorul nu poate accesa proiect
+Given Utilizatorul se afla pe pagina cu proiecte
+And titlurile proiectelor si patratele cu sageata nu sunt clickabile
+When Utilizatorul da click pe titlul oricarui proiect sau pictograma patrat cu sageata
+Then Utilizatorul nu ar trebui sa i se afiseze pagina cu proiectul selectat
+
+
+
+Feature 8: Aplicare la proiect
+Scenario 1: Utilizatorul poate aplica la un proiect
+Given Utilizatorul se afla pe pagina "Projects"
+And Utilizatorul este logat
+When Utilizatorul acceseaza una din proiectele disponibile
+And Utilizatorul da click pe butonul "Apply"
+Then Utilizatorului ar trebui sa ii fie acceptata cererea
+
+Scenario 2: Utilizatorul nu poate aplica la un proiect
+Given Utilizatorul se afla pe pagina "Projects"
+And Utilizatorul nu este logat
+When Utilizatorul acceseaza una din proiectele disponibile
+And Utilizatorulului nu ii este afisat butonul "Apply"
+Then Utilizatorul nu ar putea aplica la proiect
+
+
+Feature 9: Accesare Chat
+Scenario 1: Utilizatorul poate accesa chatul
+Given Utilizatorul se afla pe pagina principala
+And Utilizatorul este logat
+When Utilizatorul da click pe pictograma mesaj
+Then Utilizatorului ar trebui sa ii fie deschis Chatul intr-un nou tab
+
+
+
+Feature 10: Accesare Test Cycles
+Scenario 1: Utilizatorul poate accesa sectiunea Test Cycles
+Given Utilizatorul se afla pe pagina principala
+And Utilizatorul este logat
+When Utilizatorul da click pe butonul dropdonw in dreapta elementului "Projects"
+And Utilizatorul da click pe elementul "Test Cycles"
+Then Utilizatorul ar trebui sa i se afiseze fereastra "Test Cycles
+
+
+
+
+
+
+
+
+
+
+
