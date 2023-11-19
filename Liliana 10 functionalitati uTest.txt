@@ -1,0 +1,92 @@
+Feature: Inregistrarea utilizatorului pe site
+Scenario : Utilizatorul se poate inregistra pe site
+Given: Utilizatorul selecteaza optiunea "Join Today"
+When: Introduce date valide in cei 4 pasi care urmeaza
+Then: Utilizatorul ar trebui sa primeasca un email de confirmare
+
+Feature: Confirmarea email-ului
+Scenario: Utilizatorul confirma email-ul
+Given: Utilizatorul acceseaza email-ul
+When: Utilizatorul acceseaza linkul de pe email
+And: Utilizatorul da click pe butonul "Confirm email adress"
+And: Utilizatorul da click pe butonul " Click here to proceed"
+Then: Confirmarea adresei de email ar trebui sa aiba succes
+
+Fature: Autentificarea utilizatorului pe site
+Scenario: Utilizatorul se poate  autentifica pe site
+Given: Utilizatorul se afla pe pagina principala
+When: Utilizatorul da click pe butonul "Log In"
+And: Introduce email-ul si parola
+And: Click pe butonul "Sign in"
+Then: Utilizatorul ar trebui sa fie redirectionat catre pagina de start
+
+Feature: Logoul "UTest" te duce pe pagina principala
+Scenario: Redirectionarea catre pagina principala cu ajutorul butonului de logo "UTest"
+Given: Utilizatorul se afla pe pagina "Projects"
+When: Utilizatorul da click pe logoul "UTest" 
+Then: Utilizatorul ar trebui sa fie redirectionat catre pagina principala
+
+Feature: Urmarirea paginii "UTest" pe facebook
+Scenario: Utilizatorul poate urmari pagina UTest pe facebook
+Given: Utilizatorul se afla pe pagina principala a www.UTest.com
+When: Utilizatorul da click pe butonul "Follow on facebook"
+Then: Utilizatorul ar trebui sa fie redirectionat pe pagina de facebook
+
+Feature: Parola uitata
+Scenario: Utilizatorul a uitat parola pu a se loga
+Given: Utilizatorul se afla pe pagina de logare
+When: Utilizatorul selecteaza optiunea "Forgot password"
+And: Introduce un email valid pu a reseta parola
+Then: Utilizatorul ar trebui sa primeasca pe email un link pu resetarea parolei
+Given:Utilizatorul se afla pe pagina de email
+When: Utilizatorul acceseaza linkul "Reset password"
+And: Utilizatorul introduce parola noua
+And: Utilizatorul confirma parola
+And: Da click pe butonul "Submit"
+Then: Utilizatorul ar trebui sa se poata loga cu noua parola
+
+Feature: Introducerea parolei gresite
+Scenario: Utilizatorul a introdus parola gresita la logare
+Given: Utilizatorul se afla pe pagina de logare
+When: Utilizatorul introduce un email valid
+And: Introduce o parola gresita
+Then: Utilizatorul nu sa putut loga cu parola gresita
+And: Utilizatorul ar trebui sa vada mesajul "Invalid username or password"
+
+Feature: Afisarea linkurilor subliniate
+Scenario: Linkurile de la finele paginii sunt subliniate cind tinem cursorul pe ele
+Given: Utilizatorul se afla pe pagina principala
+When: Utilizatorul tine cursorul pe linkul "uTest Guidelines"
+Then: Utilizatorul ar trebui sa vada linkul "uTest Guidelines" subliniat
+Given: Utilizatorul se afla pe pagina principala
+When: Utilizatorul tine cursorul pe linkul "Privacy Policy"
+Then: Utilizatorul ar trebui sa vada linkul "Privacy Policy" subliniat
+Given: Utilizatorul se afla pe pagina principala
+When: Utilizatorul tine cursorul pe linkul "Terms & Conditions"
+Then: Utilizatorul ar trebui sa vada linkul "Terms & Conditions" subliniat
+Given: Utilizatorul se afla pe pagina principala
+When: Utilizatorul tine cursorul pe linkul "Help & Support"
+Then: Utilizatorul ar trebui sa vada linkul "Help & Support" subliniat
+
+
+Feature: Accesarea linkului "Help & Support" 
+Scenario: Utilizatorul poate accesa linkul "Help & Support" 
+Given: Utilizatorul se afla pe pagina principala
+When: Utilizatorul acceaseaza linkul "Help & Support" 
+Then: Utilizatorul ar trebui sa fie redirectionat pe pagina de suport a testerului
+
+
+Feature: Schimbarea culorii la fundalul butonului "Become a uTester"
+Scenario: Fundalul butonului "Become a uTester" se schimba cind tinem cursorul asupra lui
+Given: Utilizatorul se afla pe pagina principala
+When: Utilizatorul tine cursorul asupra butonului "Become a uTester"
+Then: Utilizatorul ar trebui sa observe cum se schimba fundalul butonului "Become a uTester"
+
+
+
+
+
+
+
+
+
