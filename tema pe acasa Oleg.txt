@@ -1,0 +1,33 @@
+                      Tema pentru acasa
+FEAUTURE:Cele mai importante functionalitati ale site ului www.utest.com
+SCENARIUL 1:Utilizatorul se poate conecta pe site ul www.utest.com
+GIVEN:Utilizatorul se afla pe pagina de autentificare.
+WHEN:Utilizatorul introduce numele de utilizator "qwerasd"si parola"asdzxc"
+THEN:Utilizatorul ar trebui sa fie redirectionat spre pagina de start.
+
+SCENARIUL 2:Afisarea Logoului "Utest"
+GIVEN:Logoul "Utest" se afla in stanga sus a paginii site ului
+WHEN:Utilizatorul vede logoul "Utest"la intraea pe site.
+THEN:Logoul"Utest"ar trebui sa fie afisat la fiecare accesare a site ului.
+
+SCENARIUL 3:Afisarea meniului "Why uTest"
+GIVEN:Utilizatorul se afla pe pagina principala a site ului
+WHEN:Utilizatorul poate accesa meniul "Whi uTest"
+THEN:Utilizatorul ar trebui sa fie redirectionat catre pagina despre "Why uTest"
+
+SCENARIUL 4:Afisarea meniului "Projects"
+GIVEN:Utilizatorul se afla pe pagina principala a site ului
+WHEN:Utilizatorul poate accesa meniul "Projects"
+THEN:Utilizatorul ar trebui sa fie redirectionat catre pagina despre "Projects"
+
+SCENARIUL 5:Afisarea butonului "Follow on Facebook"
+GIVEN:Utilizatorul se afla pe pagina principala a site ului
+WHEN:Utilizatorul poate accesa butonul "Follow on Facebook"
+THEN:Utilizatorul ar trebui sa fie redirectionat catre pagina de "Follow on Facebook"
+
+SCENARIUL 6:Afisarea butoanelor de descarcare a aplicatiilor de pe :"App Store"si "Google Play"
+GIVEN:Utilizatorul se afla pe pagina principala,dreapta jos a site ului
+WHEN:Utilizatorul poate accesa butonul "Download on the App Store"
+AND:Utilizatorul poate accesa butonul "Get it on Google Play"
+THEN:Utilizatorul ar trebui sa fie redirectionat catre pagina de descarcare a aplicatiei din "App Store"
+AND:Utilizatorul ar trebui sa fie redirectionat catre pagina de descarcare a aplicatiei din "Google Play"
