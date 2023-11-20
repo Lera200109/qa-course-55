@@ -1,0 +1,96 @@
+Feature 1: Accesarea site
+Scenario 1: Utilizatorul poate accesa site-ul
+Given: Utilizatorul se afla pe pagina principală 
+And: Utilizatorul are un dispozitiv conectat la rețeua de alimentare sau baterie
+And: Utilizatorul are instalat un browser 
+And: Utilizatorul este conectat la internet și la 
+When: Utilizatorul da click pe oricare buton 
+Then: Utilizatorul poate accesa site-ul
+
+Feature 2: Înregistrare pe site 
+Scenario 1: Utilizatorul se poate înregistra cu succes
+Given: Utilizatorul se afla pe pagina de creare cont
+And: Utilizatorul completează toate spațiile libere și trece la următoarele etape
+And: Utilizatorul la ultima etapă își creează o parolă
+And: Utilizatorul dă click pe "Complete Setup"
+When: Utilizatorul confirmă înregistrarea pe site prin email
+Then: Utilizatorul are creat cu succes un cont pe site
+
+Feature 3: Abonarea la rețelele sociale ale site-ului 
+Scenario 1: Utilizatorul se poate abona la rețelele sociale
+Given: Utilizatorul se află pe pagina de Twitter a site-ului
+And: Utilizatorul este logat pe Twitter
+When: Utilizatorul da click pe butonul „Urmărește”
+Then: Utilizatorul poate accesa profilul de Twitter a site-ului
+
+Given: Utilizatorul se află pe pagina de Facebook a site-ului
+And: Utilizatorul este logat pe Facebook
+When: Utilizatorul da click pe butonul „Urmărește”
+Then: Utilizatorul poate accesa profilul de Facebook a site-ului
+
+
+
+Given: Utilizatorul se află pe pagina de Instagram a site-ului
+And: Utilizatorul este logat pe Instagram
+When: Utilizatorul da click pe butonul „Urmărește”
+Then: Utilizatorul poate accesa profilul de Instagram a site-ului
+
+Given: Utilizatorul se afla pe pagina de LinkedIn a site-ului
+And: Utilizatorul este logat pe Instagram
+When: Utilizatorul da click pe butonul „Urmărește”
+Then: Utilizatorul poate accesa profilul de Instagram a site-ului
+
+Feature 4: Descărcarea aplicației 
+Scenario 1: Utilizatorul poate descărca aplicația 
+Given: Utilizatorul se află în Play Market
+When: Utilizatorul da click pe butonul “Descarcă”
+Then: Utilizatorul poate accesa aplicația descărcată 
+
+Given: Utilizatorul se află în App Store 
+When: Utilizatorul da click pe butonul “Descarcă”
+Then: Utilizatorul poate accesa aplicația descărcată 
+
+Feature 5: Cum funcționează site-ul
+Scenario 1: Utilizatorul poate accesa video “How uTest Works”
+Given: Utilizatorul se află pe pagina principală 
+When: Utilizatorul da click pe butonul în formă de dreptunghi și mijlocul lui un triunghi 
+Then: Utilizatorul poate viziona video-ul “How uTest Works”
+
+Feature 6: Informație despre site
+Scenario 1: Utilizatorul poate accesa informația despre site 
+Given: Utilizatorul se afla pe pagina principală 
+When: Utilizatorul da click “About Us”
+Then: Utilizatorul poate citi informația despre site 
+
+Feature 7: Alegerea înregistrării pe www.utest.com
+Scenario 1: Utilizatorul poate accesa informația 
+Given: Utilizatorul se află pe pagina principală 
+When: Utilizatorul da click “Why uTest”
+Then: Utilizatorul poate citi informația despre părțile pozitive  ale înregistrării pe www.utest.com
+
+Feature 8: Setarea metodei de plată 
+Scenario 1: Utilizatorul poate seta metoda de plată
+And: Utilizatorul este logat
+Given: Utilizatorul se află pe “Payments”
+When: Utilizatorul da click pe “Setup”
+And: Utilizatorul alegere metoda de plată “Paypal”
+And: Utilizatorul confirmă că are cont “Paypal”
+And: Utilizatorul introduce adresa de email “Paypal”
+And: Utilizatorul apasă pe butonul “Save”
+Then: Utilizatorul ar trebui să poată efectua plăți  
+
+Feature 9: Adăugarea de informații pe profil
+Scenario 1: Utilizatorul poate adăuga mai multe detalii 
+And: Utilizatorul este logat
+Given: Utilizatorul se află pe “Tester Profile”
+When: Utilizatorul dă click pe “Edit Profile”
+And: Utilizatorul completează spațiile libere 
+And: Utilizatorul apasă pe butonul “Save”
+Then: Utilizatorul ar trebui să aibă informație suplimentară afișată despre el
+
+Feature 10: Accesarea unui curs 
+Scenario 1: Utilizatorul poate accesa un curs 
+And: Utilizatorul este logat
+Given: Utilizatorul se afla pe pagina “Academy”
+When: Utilizatorul dă click pe oricare curs 
+Then: Utilizatorul ar trebui să aibă acces la orice test 
