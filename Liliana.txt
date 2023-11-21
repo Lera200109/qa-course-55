@@ -4,3 +4,5 @@ Given: Utilizatorul se afla pe pagina principala
 And: Utlizatorul nu este logat
 When: Utilizatorul da click pe profilul unui specialist QA
 Then: Utilizatorului ar trebui sa poata accesa profilul specialistului QA
+
+Saluuuu 
