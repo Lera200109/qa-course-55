@@ -31,3 +31,6 @@ WHEN:Utilizatorul poate accesa butonul "Download on the App Store"
 AND:Utilizatorul poate accesa butonul "Get it on Google Play"
 THEN:Utilizatorul ar trebui sa fie redirectionat catre pagina de descarcare a aplicatiei din "App Store"
 AND:Utilizatorul ar trebui sa fie redirectionat catre pagina de descarcare a aplicatiei din "Google Play"
+
+
+ACAsa
