@@ -1,0 +1,33 @@
+Bug report 
+Utilizatorul nu poate accesa optiunea „Join Today”
+Descriere:
+Utilizatorul nu poate accesa optiunea „Join Today”
+Preconditii:
+Dispozitiv conectat la reteaua de alimentare sau baterie
+Browser
+Sistem de operare
+Acces la internet
+Mediu:
+„www.utest.com „
+Pasii de reproducere:
+1.Porneste dispozitivul
+2.Conecteaza-te la reteaua de internet
+3.Deschide browser
+4.Tapeaza textul “www.utest.com “ in bara de cautare
+5.Apasa tasta “Enter”
+6.Localizeaza optiunea „Join Today”
+7.Click pe optiunea „Join Today”
+Datele de test:
+“www.utest.com “ - in calitate de adresa de productie
+Rezultatul asteptat:
+Utilizatorul poate accesa optiunea „Join Today”
+Rezultatul actual:
+Utilizatorul nu poate accesa optiunea „Join Today”
+Atasament:
+1.jpg
+Attemps to repeat:
+0
+Severitate:
+Mare
+Prioritate:
+10/10
